@@ -1,0 +1,23 @@
+ul {
+    list-style: none;
+}
+
+li {
+    padding-left:10px;
+}
+
+li::marker {
+    content:"\2622";
+    color:crimson;
+    animation: marker_anim 1s ease-in-out infinite;
+}
+
+@keyframes marker_anim {
+    0%,100% {
+        scale:1.5;
+    }
+
+    50% {
+        scale:1;
+    }
+}
