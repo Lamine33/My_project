@@ -3,7 +3,7 @@ ul {
 }
 
 li {
-    padding-left:10px;
+    padding-left:20px;
 }
 
 li::marker {
@@ -19,5 +19,42 @@ li::marker {
 
     50% {
         scale:1;
+    }
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    background-color:rgb(49, 49, 49);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box div {
+    width: 15px;
+    height:15px;
+    border-radius:50%;
+    background-color:seagreen;
+    animation: loading 700ms ease infinite backwards;
+}
+
+.box div:nth-child(2) {
+    animation-delay:.3s;
+}
+
+.box div:last-child {
+    animation-delay:.6s
+}
+
+@keyframes loading {
+    0% {
+        opacity:0.2;
+    }
+    
+    100% {
+        opacity:1;
+        transform:translatey(-10px)
     }
 }
